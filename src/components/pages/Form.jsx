@@ -127,29 +127,29 @@ const Form = ({
 
 					navigate('/table');
 				}}
-				// validationSchema={yup.object({
-				// 	username: yup.string().required('Name is required'),
-				// 	email: yup
-				// 		.string()
-				// 		.email('Please enter valid email adress')
-				// 		.required('Email is required'),
-				// 	object: yup.string().required('Object is required'),
-				// 	date: yup.string().required('Date of birth is required'),
-				// 	gender: yup.string().required('Gender is required'),
-				// 	nationality: yup.string().required('Nationality is required'),
-				// 	nationId: yup
-				// 		.string()
-				// 		.min(6, 'your Id must be at least 8 characters or greater')
-				// 		.required('Nation ID is required'),
-				// 	province: yup.string().required('Contact province is required'),
-				// 	district: yup.string().required('Contact district is required'),
-				// 	address: yup.string().required('Contact address is required'),
-				// 	mobile: yup
-				// 		.string()
-				// 		.matches(/^[0-9]+$/, 'Must be only digits')
-				// 		.min(8, 'Must be at least 8 digits')
-				// 		.required('Mobile is required'),
-				// })}
+				validationSchema={yup.object({
+					username: yup.string().required('Name is required'),
+					email: yup
+						.string()
+						.email('Please enter valid email adress')
+						.required('Email is required'),
+					object: yup.string().required('Object is required'),
+					date: yup.string().required('Date of birth is required'),
+					gender: yup.string().required('Gender is required'),
+					nationality: yup.string().required('Nationality is required'),
+					nationId: yup
+						.string()
+						.min(6, 'your Id must be at least 8 characters or greater')
+						.required('Nation ID is required'),
+					province: yup.string().required('Contact province is required'),
+					district: yup.string().required('Contact district is required'),
+					address: yup.string().required('Contact address is required'),
+					mobile: yup
+						.string()
+						.matches(/^[0-9]+$/, 'Must be only digits')
+						.min(8, 'Must be at least 8 digits')
+						.required('Mobile is required'),
+				})}
 			>
 				{(formik) => {
 					const watchVaccines = formik.values.vaccines;
